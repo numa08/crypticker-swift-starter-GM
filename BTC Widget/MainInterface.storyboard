@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7703" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -16,50 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$592.12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBr-E6-J7B">
-                                <rect key="frame" x="16" y="8" width="82" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$592.12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU2-O0-cIt">
+                                <rect key="frame" x="16" y="8" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.25882352941176467" green="0.56862745098039214" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmp-PL-NUS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1.23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4z-Jm-op7">
+                                <rect key="frame" x="224" y="8" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.52156862745098043" green="0.74901960784313726" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdO-K5-XFV" customClass="JBLineChartView">
+                                <rect key="frame" x="0.0" y="52" width="320" height="98"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="TCg-xC-5a4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-zs-IMq">
                                 <rect key="frame" x="276" y="0.0" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="JDx-pV-HSw"/>
-                                    <constraint firstAttribute="height" constant="44" id="zB4-18-fO1"/>
+                                    <constraint firstAttribute="height" constant="44" id="n9K-E1-Z5M"/>
+                                    <constraint firstAttribute="width" constant="44" id="sg5-GP-5zD"/>
                                 </constraints>
                                 <state key="normal" image="caret-notification-center">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleLineChart:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="BPj-Ba-am8"/>
+                                    <action selector="toggleLineChart:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="5ca-Mq-8Ia"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAk-fH-hPw" customClass="JBLineChartView">
-                                <rect key="frame" x="0.0" y="52" width="320" height="98"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="tfx-eL-jJ2"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1.23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvZ-P4-BpV">
-                                <rect key="frame" x="224" y="8" width="44" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.52156862745098043" green="0.74901960784313726" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cAk-fH-hPw" secondAttribute="trailing" id="BIr-5w-UHL"/>
-                            <constraint firstItem="NvZ-P4-BpV" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="Jsb-j1-Nch"/>
-                            <constraint firstItem="dmp-PL-NUS" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Qm8-dM-wAE"/>
-                            <constraint firstItem="qBr-E6-J7B" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="16" id="TYU-k0-8SP"/>
-                            <constraint firstItem="cAk-fH-hPw" firstAttribute="top" secondItem="dmp-PL-NUS" secondAttribute="bottom" constant="8" id="YKk-Um-x6z"/>
-                            <constraint firstItem="cAk-fH-hPw" firstAttribute="top" secondItem="dmp-PL-NUS" secondAttribute="bottom" priority="250" constant="8" id="YXh-Qi-np1"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="cAk-fH-hPw" secondAttribute="bottom" id="i6v-OY-96Y"/>
-                            <constraint firstItem="qBr-E6-J7B" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="lRK-5c-geg"/>
-                            <constraint firstItem="dmp-PL-NUS" firstAttribute="leading" secondItem="NvZ-P4-BpV" secondAttribute="trailing" constant="8" id="qV1-rJ-EOw"/>
-                            <constraint firstAttribute="trailing" secondItem="dmp-PL-NUS" secondAttribute="trailing" id="wHM-TI-fLY"/>
-                            <constraint firstItem="cAk-fH-hPw" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="zy4-Kg-VWy"/>
+                            <constraint firstItem="LdO-K5-XFV" firstAttribute="top" secondItem="1jy-zs-IMq" secondAttribute="bottom" priority="250" constant="8" id="4lb-d4-Fvi"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="LdO-K5-XFV" secondAttribute="bottom" id="7Mz-NZ-OlE"/>
+                            <constraint firstItem="DU2-O0-cIt" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="16" id="Bcl-Qt-rHH"/>
+                            <constraint firstItem="1jy-zs-IMq" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Ma6-Az-sGa"/>
+                            <constraint firstItem="LdO-K5-XFV" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="NAw-oc-KWi"/>
+                            <constraint firstItem="DU2-O0-cIt" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="Ojj-wI-oMc"/>
+                            <constraint firstItem="1jy-zs-IMq" firstAttribute="leading" secondItem="Z4z-Jm-op7" secondAttribute="trailing" constant="8" id="PJv-aJ-ni6"/>
+                            <constraint firstAttribute="trailing" secondItem="LdO-K5-XFV" secondAttribute="trailing" id="Yjg-Np-HQR"/>
+                            <constraint firstAttribute="trailing" secondItem="1jy-zs-IMq" secondAttribute="trailing" id="brr-GI-yVR"/>
+                            <constraint firstItem="Z4z-Jm-op7" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="oqu-wj-eMO"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -69,16 +69,16 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="150"/>
                     <connections>
-                        <outlet property="lineChartHeightConstraint" destination="tfx-eL-jJ2" id="t51-Dh-9Nw"/>
-                        <outlet property="lineChartView" destination="cAk-fH-hPw" id="3bM-WT-sA3"/>
-                        <outlet property="priceChangeLabel" destination="NvZ-P4-BpV" id="NWP-mK-rAg"/>
-                        <outlet property="priceLabel" destination="qBr-E6-J7B" id="SOy-ut-PD0"/>
-                        <outlet property="toggleLineChartButton" destination="dmp-PL-NUS" id="G74-Ki-507"/>
+                        <outlet property="lineChartHeightConstraint" destination="TCg-xC-5a4" id="fVG-G8-646"/>
+                        <outlet property="lineChartView" destination="LdO-K5-XFV" id="o2u-0I-Bme"/>
+                        <outlet property="priceChangeLabel" destination="Z4z-Jm-op7" id="Chd-J3-qWx"/>
+                        <outlet property="priceLabel" destination="DU2-O0-cIt" id="S0X-tu-9O3"/>
+                        <outlet property="toggleLineChartButton" destination="1jy-zs-IMq" id="NyG-zV-HNg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="285"/>
+            <point key="canvasLocation" x="418" y="290"/>
         </scene>
     </scenes>
     <resources>
