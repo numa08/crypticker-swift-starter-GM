@@ -29,7 +29,7 @@ public class BitCoinPrice : NSObject, NSCoding, Printable {
         return "Price: $\(value) at \(time)"
     }
     
-    public init(fromJSON json: JSONValue) {
+    public init(fromJSON json: JSON) {
         value = json["y"].number!
         
         let timeInterval :NSTimeInterval = json["x"].double!
@@ -37,8 +37,8 @@ public class BitCoinPrice : NSObject, NSCoding, Printable {
     }
     
     public required init(coder aDecoder: NSCoder)  {
-        value = aDecoder.decodeObjectForKey("value") as NSNumber
-        time = aDecoder.decodeObjectForKey("time") as NSDate
+        value = aDecoder.decodeObjectForKey("value") as! NSNumber
+        time = aDecoder.decodeObjectForKey("time") as! NSDate
     }
     
     public func encodeWithCoder(aCoder: NSCoder) {
