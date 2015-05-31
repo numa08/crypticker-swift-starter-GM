@@ -29,7 +29,7 @@ public class BitCoinStats : NSObject, NSCoding, Printable {
         return "Price: \(marketPriceUSD) right now (\(time))"
     }
     
-    public init(fromJSON json: JSONValue) {
+    public init(fromJSON json: JSON) {
         marketPriceUSD = json["market_price_usd"].number!
         
         let timeInterval :NSTimeInterval = json["timestamp"].double! / 1000
@@ -38,8 +38,8 @@ public class BitCoinStats : NSObject, NSCoding, Printable {
     }
     
     public required init(coder aDecoder: NSCoder) {
-        marketPriceUSD = aDecoder.decodeObjectForKey("marketPriceUSD") as NSNumber
-        time = aDecoder.decodeObjectForKey("time") as NSDate
+        marketPriceUSD = aDecoder.decodeObjectForKey("marketPriceUSD") as! NSNumber
+        time = aDecoder.decodeObjectForKey("time") as! NSDate
     }
     
     public func encodeWithCoder(aCoder: NSCoder)  {
